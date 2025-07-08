@@ -118,3 +118,61 @@ section + section {
     padding: 10px;
   }
 }
+/* Kontaktformular Styling */
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f7f1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(122, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  color: #7a0000;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #7a0000;
+  outline: none;
+}
+
+form button {
+  background-color: #7a0000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a30000;
+}
+
+/* Responsive für kleinere Bildschirme */
+
+@media (max-width: 60
