@@ -1,7 +1,8 @@
 /* Reset & Basis */
 * {
   box-sizing: border-box;
-  margin: 0; padding: 0;
+  margin: 0; 
+  padding: 0;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 .main-header {
   display: flex;
   flex-direction: column;
@@ -25,9 +27,11 @@ body {
 }
 
 .logo {
-  max-width: 250px; /* größer als vorher */
+  max-width: 250px; /* Logo groß & responsive */
   height: auto;
   user-select: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .desktop-nav {
@@ -41,35 +45,6 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.desktop-nav a:hover,
-.desktop-nav a.active {
-  color: #b20303;
-}
-
-@media (max-width: 768px) {
-  .desktop-nav {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-  .logo {
-    max-width: 180px;
-  }
-}
-}
-
-.logo img {
-  max-height: 50px;
-  width: auto;
-}
-
-.desktop-nav a {
-  text-decoration: none;
-  color: #111;
-  margin-left: 2em;
-  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -124,6 +99,9 @@ body {
   }
   .mobile-nav-toggle {
     display: block;
+  }
+  .logo {
+    max-width: 180px;
   }
 }
 
@@ -316,6 +294,8 @@ footer a:hover {
     text-align: center;
   }
 }
+
+/* Prozess Buttons */
 .prozess-buttons {
   text-align: center;
   padding: 4rem 1rem;
@@ -356,4 +336,3 @@ footer a:hover {
 .prozess-btn:hover {
   background-color: #850202;
 }
-
