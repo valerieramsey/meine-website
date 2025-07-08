@@ -1,256 +1,206 @@
-/* Google Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap');
+/* === Grundlegende Einstellungen === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  margin: 0;
-  padding: 0;
+  color: #111;
+  background-color: #fff;
   line-height: 1.6;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 3rem;
-  background-color: #ffffff;
-  border-bottom: 2px solid #b20303;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* === Farben === */
+:root {
+  --rot: #b20303;
+  --dunkelrot: #800202;
+  --schwarz: #000;
+  --weiß: #fff;
 }
 
-header img {
-  height: 50px;
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--weiß);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 60px;
 }
 
 nav a {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  color: #b20303;
+  margin-left: 1.5rem;
   text-decoration: none;
-  margin-left: 2rem;
-  transition: color 0.3s ease;
+  color: var(--schwarz);
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #000000;
+  color: var(--rot);
 }
 
-main {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  font-family: 'Libre Baskerville', serif;
-  font-size: 1.125rem;
-  color: #000000;
-}
-
-h1, h2 {
-  font-family: 'Inter', sans-serif;
-  color: #b20303;
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1.5rem;
-}
-
-button, input[type="submit"] {
-  background-color: #b20303;
-  color: white;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  border: none;
-  padding: 0.75rem 1.75rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover, input[type="submit"]:hover {
-  background-color: #7a0000; /* dunkleres Rot als Hover */
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  color: #444444;
-  border-top: 1px solid #ddd;
-  margin-top: 4rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  nav a {
-    margin: 0.5rem 1rem;
-  }
-  main {
-    margin: 2rem 1rem;
-  }
-}
-/* Hero Section */
+/* === Hero === */
 .hero {
   background: url('jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg') center/cover no-repeat;
-  color: white;
+  padding: 12rem 2rem;
   text-align: center;
-  padding: 8rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: var(--weiß);
+  position: relative;
 }
 
-.hero-text h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Libre Baskerville', serif;
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 
-.hero-text p {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 1.5rem;
+.hero p {
+  font-size: 1.25rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 .btn-primary {
-  background-color: #b20303;
-  color: white;
-  font-weight: 600;
-  padding: 1rem 2.5rem;
-  border-radius: 30px;
+  background-color: var(--rot);
+  color: var(--weiß);
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.125rem;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #7a0000;
+  background-color: var(--dunkelrot);
 }
 
-/* Angebote */
+/* === Angebot / Leistungen === */
 .angebote {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .angebote h2 {
-  color: #b20303;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 3rem;
   font-size: 2.5rem;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 2rem;
 }
 
 .angebot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .angebot-item {
-  background-color: #fcfbf9;
+  background: var(--weiß);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(178,3,3,0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.angebot-item:hover {
-  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .icon {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: #b20303;
+  color: var(--rot);
 }
 
 .angebot-item h3 {
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 0.75rem;
-  color: #b20303;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.angebot-item p {
-  font-family: 'Libre Baskerville', serif;
-  color: #333;
-}
-
-/* Über mich */
+/* === Über mich === */
 .ueber-mich {
-  max-width: 900px;
-  margin: 6rem auto 4rem;
-  padding: 0 1.5rem;
-  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .ueber-mich h2 {
-  color: #b20303;
-  font-family: 'Inter', sans-serif;
+  text-align: center;
   font-size: 2.5rem;
+  font-family: 'Libre Baskerville', serif;
   margin-bottom: 2rem;
 }
 
 .ueber-mich-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
+  text-align: center;
 }
 
 .ueber-mich-content img {
-  max-width: 300px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(178,3,3,0.2);
-  flex-shrink: 0;
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.ueber-mich-content p {
-  max-width: 500px;
-  font-family: 'Libre Baskerville', serif;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Footer */
+/* === Footer === */
 footer {
-  background-color: #fcfbf9;
-  color: #777;
+  background: var(--schwarz);
+  color: var(--weiß);
+  padding: 2rem;
   text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
+  margin-top: 4rem;
 }
 
-/* Responsive */
+footer a {
+  color: var(--rot);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
   .ueber-mich-content {
     flex-direction: column;
   }
-  .ueber-mich-content img {
-    max-width: 100%;
-  }
 }
 
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-}
