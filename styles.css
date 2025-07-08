@@ -77,3 +77,44 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* Hover-Effekt für Links im Header */
+nav a:hover {
+  color: #7a0000;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Button Hover */
+button:hover, .cta:hover {
+  background-color: #7a0000;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Navigation - einfache mobile Ansicht */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    margin-top: 10px;
+    width: 100%;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* Etwas mehr Abstand zwischen Abschnitten */
+section + section {
+  margin-top: 40px;
+}
+
+/* Schriftgröße im Hero für kleine Bildschirme */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+    padding: 10px;
+  }
+}
