@@ -3,23 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Key Broker – Persönliche Begleitung beim Immobilienkauf</title>
+  <title>The Key Broker – Immobilienkauf mit persönlicher Begleitung</title>
+
+  <!-- Schriften -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <img src="LOGO.png" alt="The Key Broker Logo" class="logo" />
-    <nav>
-      <a href="index.html">Startseite</a>
+  <header class="main-header">
+    <div class="logo">
+      <img src="LOGO.png" alt="The Key Broker Logo" />
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Start</a>
       <a href="ueber-mich.html">Über mich</a>
       <a href="kontakt.html">Kontakt</a>
       <a href="blog.html">Blog</a>
     </nav>
+    <div class="mobile-nav-toggle" id="menu-toggle">
+      ☰
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <section class="hero" style="background-image: url('jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg');">
+    <div class="overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
       <h1>Deine persönliche Begleitung<br>beim Immobilienkauf in Deutschland</h1>
       <p>Professionell, ehrlich und zweisprachig – von der Suche bis zur Schlüsselübergabe an deiner Seite.</p>
       <a href="kontakt.html" class="btn-primary">Jetzt Beratung anfragen</a>
@@ -27,53 +50,60 @@
   </section>
 
   <main>
-    <section class="angebote">
+    <section class="features" data-aos="fade-up">
       <h2>Mein Angebot für dich</h2>
-      <div class="angebot-grid">
-        <div class="angebot-item">
-          <div class="icon">🏠</div>
+      <div class="feature-grid">
+        <div class="feature">
+          <i class="fas fa-user-check"></i>
           <h3>Persönliche Beratung</h3>
-          <p>Bei der Immobiliensuche stehe ich dir mit Rat und Tat zur Seite.</p>
+          <p>Begleitung bei der Immobiliensuche mit Empathie & Erfahrung.</p>
         </div>
-        <div class="angebot-item">
-          <div class="icon">🌐</div>
-          <h3>Zweisprachige Begleitung</h3>
-          <p>Professionelle Unterstützung auf Deutsch und Englisch.</p>
+        <div class="feature">
+          <i class="fas fa-globe"></i>
+          <h3>Zweisprachig (DE/EN)</h3>
+          <p>Verständliche Begleitung auf Deutsch und Englisch.</p>
         </div>
-        <div class="angebot-item">
-          <div class="icon">💰</div>
-          <h3>Baufinanzierungsvermittlung</h3>
-          <p>Unabhängig und kostenfrei – die beste Finanzierung für dich.</p>
+        <div class="feature">
+          <i class="fas fa-piggy-bank"></i>
+          <h3>Finanzierung</h3>
+          <p>Unabhängige Vermittlung, kostenfrei für dich.</p>
         </div>
-        <div class="angebot-item">
-          <div class="icon">📄</div>
-          <h3>Unterstützung bei Terminen</h3>
-          <p>Bank-, Notar- und Maklertermine einfach meistern.</p>
+        <div class="feature">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Termin-Begleitung</h3>
+          <p>Support bei Bank, Notar & Makler.</p>
         </div>
-        <div class="angebot-item">
-          <div class="icon">📝</div>
-          <h3>Checklisten & Abläufe</h3>
-          <p>Klare Schritt-für-Schritt-Betreuung für mehr Übersicht.</p>
+        <div class="feature">
+          <i class="fas fa-list-check"></i>
+          <h3>Klare Abläufe</h3>
+          <p>Checklisten, Übersicht und Sicherheit bei jedem Schritt.</p>
         </div>
-        <div class="angebot-item">
-          <div class="icon">❤️</div>
+        <div class="feature">
+          <i class="fas fa-heart"></i>
           <h3>Mit Herz & Struktur</h3>
-          <p>Ehrlich, transparent und immer für dich da.</p>
+          <p>Ehrlich, nahbar, professionell – für dich da.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="ueber-mich">
-      <h2>Über mich</h2>
-      <div class="ueber-mich-content">
-        <img src="Facetune_04-12-2024-09-36-56.jpeg" alt="Portrait von The Key Broker" />
-        <p>Ich bin zertifizierte Immobilienexpertin und Baufinanzierungsvermittlerin mit langjähriger Erfahrung. Ich begleite dich persönlich und individuell bei deinem Immobilienkauf in Deutschland.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 The Key Broker | <a href="kontakt.html">Kontakt</a></p>
+    <div class="footer-content">
+      <p>© 2025 The Key Broker</p>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const toggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+    toggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+  </script>
 </body>
 </html>
+
