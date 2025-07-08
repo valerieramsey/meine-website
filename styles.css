@@ -1,143 +1,98 @@
-/* Grundlegendes Styling */
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap');
+
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
   margin: 0;
   padding: 0;
-  background-color: #fffdfa;
-  color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
 header {
-  background-color: #7a0000;
-  color: white;
-  padding: 20px 10px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background-color: #ffffff;
+  border-bottom: 2px solid #b20303;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-/* Navigation */
-nav {
-  margin-top: 10px;
+header img {
+  height: 50px;
 }
 
 nav a {
-  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #b20303;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+  margin-left: 2rem;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #a30000;
+  color: #000000;
 }
 
-/* Trennlinie unter Navigation */
-hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 0 0 20px 0;
-}
-
-/* Hauptbereich */
 main {
-  padding: 20px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  color: #000000;
 }
 
-/* Überschriften */
-h2 {
-  color: #7a0000;
-  margin-top: 0;
+h1, h2 {
+  font-family: 'Inter', sans-serif;
+  color: #b20303;
+  margin-bottom: 1rem;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px 10px;
-  background-color: #f2f0eb;
-  color: #555;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
+p {
+  margin-bottom: 1.5rem;
 }
 
-/* Kontaktformular Styling */
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f7f1;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(122, 0, 0, 0.1);
-  font-family: inherit;
-}
-
-form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 6px;
-  color: #7a0000;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
-  border-color: #7a0000;
-  outline: none;
-}
-
-form button {
-  background-color: #7a0000;
+button, input[type="submit"] {
+  background-color: #b20303;
   color: white;
-  padding: 12px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   border: none;
+  padding: 0.75rem 1.75rem;
   border-radius: 25px;
-  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-form button:hover {
-  background-color: #a30000;
+button:hover, input[type="submit"]:hover {
+  background-color: #7a0000; /* dunkleres Rot als Hover */
 }
 
-/* Responsive für kleinere Bildschirme */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #444444;
+  border-top: 1px solid #ddd;
+  margin-top: 4rem;
+}
 
+/* Responsive */
 @media (max-width: 600px) {
-  main {
-    padding: 15px;
+  header {
+    flex-direction: column;
+    padding: 1rem;
   }
-
-  form {
-    width: 90%;
-    padding: 15px;
-  }
-
   nav a {
-    display: inline-block;
-    margin: 8px 10px;
+    margin: 0.5rem 1rem;
+  }
+  main {
+    margin: 2rem 1rem;
   }
 }
-
