@@ -1,123 +1,74 @@
-/* === Basis-Design für The Key Broker === */
+/* Grundlegendes Styling */
 body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #111;
-  background-color: #fff;
+  padding: 0;
+  background-color: #fffdfa;
+  color: #333;
 }
 
-h1, h2, h3 {
-  font-family: 'Libre Baskerville', serif;
-}
-
-a {
-  color: #c40000;
-  text-decoration: none;
-  font-weight: 500;
-}
-
+/* Header */
 header {
-  background: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #7a0000;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
 }
 
-header img.logo {
-  height: 60px;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-  margin-left: 20px;
-  font-size: 16px;
-}
-
-.hero {
-  background: url("jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg") no-repeat center center/cover;
-  height: 90vh;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 48px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-section {
-  padding: 60px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-button, .cta {
-  background-color: #c40000;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-/* Hover-Effekt für Links im Header */
-nav a:hover {
-  color: #7a0000;
-  text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-/* Button Hover */
-button:hover, .cta:hover {
-  background-color: #7a0000;
-  transition: background-color 0.3s ease;
+nav a:hover {
+  color: #a30000;
 }
 
-/* Responsive Navigation - einfache mobile Ansicht */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav {
-    margin-top: 10px;
-    width: 100%;
-  }
-  nav a {
-    display: block;
-    margin: 10px 0 0 0;
-  }
+/* Trennlinie unter Navigation */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 0 20px 0;
 }
 
-/* Etwas mehr Abstand zwischen Abschnitten */
-section + section {
+/* Hauptbereich */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Überschriften */
+h2 {
+  color: #7a0000;
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #f2f0eb;
+  color: #555;
   margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
 }
 
-/* Schriftgröße im Hero für kleine Bildschirme */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 28px;
-    padding: 10px;
-  }
-}
 /* Kontaktformular Styling */
 
 form {
@@ -127,7 +78,7 @@ form {
   background-color: #f9f7f1;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(122, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
+  font-family: inherit;
 }
 
 form label {
@@ -146,7 +97,6 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  font-family: inherit;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
@@ -175,4 +125,19 @@ form button:hover {
 
 /* Responsive für kleinere Bildschirme */
 
-@media (max-width: 60
+@media (max-width: 600px) {
+  main {
+    padding: 15px;
+  }
+
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px;
+  }
+}
+
