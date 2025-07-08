@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
-  <title>The Key Broker</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Key Broker – Persönliche Begleitung beim Immobilienkauf</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="navbar">
-    <img src="LOGO.png" alt="The Key Broker Logo" class="logo" />
+
+  <header>
+    <img src="logo.png" alt="The Key Broker Logo" />
     <nav>
-      <ul class="nav-links">
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#info">Informationen</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-        <li><a href="#articles">Artikel</a></li>
-        <li class="lang-switch">
-          <a href="#" onclick="switchLang('de')">🇩🇪</a>
-          <a href="#" onclick="switchLang('en')">🇬🇧</a>
-        </li>
-      </ul>
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <h1 id="hero-title">Willkommen bei The Key Broker</h1>
-        <p id="hero-subtitle">Deine persönliche Begleitung beim Immobilienkauf in Deutschland</p>
-        <a href="#contact" class="cta">Jetzt kostenloses Erstgespräch buchen</a>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h1>Willkommen bei The Key Broker</h1>
+      <p>Du möchtest in Deutschland eine Immobilie kaufen – fühlst dich aber von Bürokratie, Fachbegriffen und Abläufen überfordert? Genau hier komme ich ins Spiel.</p>
 
-  <main class="content">
-    <section class="text-section" id="about">
-      <h2>🔑 Was ich anbiete</h2>
-      <ul id="service-list">
+      <p>Als zertifizierte Immobilienexpertin und Baufinanzierungsvermittlerin begleite ich internationale Kunden professionell, persönlich und zweisprachig (Englisch/Deutsch) durch den gesamten Kaufprozess. Von der Suche über die Finanzierung bis zur Schlüsselübergabe – ich bin an deiner Seite.</p>
+
+      <h2>Mein Angebot</h2>
+      <ul>
         <li>Persönliche Beratung bei der Immobiliensuche</li>
         <li>Zweisprachige Begleitung (EN/DE)</li>
         <li>Unabhängige Baufinanzierungsvermittlung (kostenfrei für dich)</li>
@@ -49,55 +43,9 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 The Key Broker</p>
+  <footer>
+    <p>© 2025 The Key Broker</p>
   </footer>
 
-  <script>
-    const de = {
-      title: "Willkommen bei The Key Broker",
-      subtitle: "Deine persönliche Begleitung beim Immobilienkauf in Deutschland",
-      button: "Jetzt kostenloses Erstgespräch buchen",
-      list: [
-        "Persönliche Beratung bei der Immobiliensuche",
-        "Zweisprachige Begleitung (EN/DE)",
-        "Unabhängige Baufinanzierungsvermittlung (kostenfrei für dich)",
-        "Unterstützung bei Bank-, Notar- und Maklerterminen",
-        "Hilfe bei Unterlagen, Abläufen & Übersetzungen",
-        "Klare Checklisten und Schritt-für-Schritt-Betreuung",
-        "Ehrlich, strukturiert und mit Herz"
-      ]
-    };
-    const en = {
-      title: "Welcome to The Key Broker",
-      subtitle: "Your trusted partner for buying property in Germany",
-      button: "Book a free consultation",
-      list: [
-        "Personal consulting for your home search",
-        "Bilingual support (EN/DE) throughout the process",
-        "Independent mortgage brokerage (at no cost to you)",
-        "Coordination with agents, banks, notaries & more",
-        "Help with paperwork, appointments, and translations",
-        "Checklists, timelines, and step-by-step explanations",
-        "Transparent, caring, and experienced service"
-      ]
-    };
-
-    function switchLang(lang) {
-      const content = lang === 'en' ? en : de;
-      document.getElementById('hero-title').textContent = content.title;
-      document.getElementById('hero-subtitle').textContent = content.subtitle;
-      document.querySelector('.cta').textContent = content.button;
-
-      const ul = document.getElementById('service-list');
-      ul.innerHTML = '';
-      content.list.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        ul.appendChild(li);
-      });
-    }
-  </script>
 </body>
 </html>
-
