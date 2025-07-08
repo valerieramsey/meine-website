@@ -2,166 +2,102 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Key Broker – Startseite</title>
-  
-  <!-- Google Fonts: Inter & Libre Baskerville -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet" />
-  
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #000;
-    }
-    h1, h2, h3 {
-      font-family: 'Libre Baskerville', serif;
-    }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    header img.logo {
-      height: 50px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #cc0000;
-    }
-    .flags {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .flags img {
-      width: 24px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      border-radius: 3px;
-      transition: border-color 0.3s;
-    }
-    .flags img:hover {
-      border-color: #cc0000;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1 {
-      color: #cc0000;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-      font-size: 0.9em;
-    }
-    a.cta, button.cta {
-      background-color: #cc0000;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 15px;
-      display: inline-block;
-      text-decoration: none;
-    }
-    a.cta:hover, button.cta:hover {
-      background-color: #990000;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Key Broker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="navbar">
+    <img src="LOGO.png" alt="The Key Broker Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#info">Informationen</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#articles">Artikel</a></li>
+        <li class="lang-switch">
+          <a href="#" onclick="switchLang('de')">🇩🇪</a>
+          <a href="#" onclick="switchLang('en')">🇬🇧</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <img src="assets/logo.png" alt="The Key Broker Logo" class="logo" />
-  <nav>
-    <a href="#startseite">Startseite</a>
-    <a href="#ueberuns">Über uns</a>
-    <a href="#informationen">Informationen</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#artikel">Artikel</a>
-  </nav>
-  <div class="flags">
-    <a href="../en/index.html"><img src="assets/flag_en.png" alt="English" title="English Version" /></a>
-    <img src="assets/flag_de.png" alt="Deutsch" title="Deutsche Version" />
-  </div>
-</header>
-
-<main>
-  <section id="startseite">
-    <h1>Willkommen bei The Key Broker</h1>
-    <p>Wir unterstützen Menschen aus dem Ausland dabei, Immobilien in Deutschland zu kaufen, passende Finanzierungen zu sichern und begleiten Sie bei Übersetzungen sowie Behördengängen.</p>
-    <a href="#kontakt" class="cta">Kontakt aufnehmen</a>
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1 id="hero-title">Willkommen bei The Key Broker</h1>
+        <p id="hero-subtitle">Deine persönliche Begleitung beim Immobilienkauf in Deutschland</p>
+        <a href="#contact" class="cta">Jetzt kostenloses Erstgespräch buchen</a>
+      </div>
+    </div>
   </section>
 
-  <section id="ueberuns">
-    <h2>Über uns</h2>
-    <p>Mit langjähriger Erfahrung im deutschen Immobilienmarkt und einem internationalen Netzwerk begleiten wir Sie kompetent und vertrauensvoll bei Ihrem Immobilienkauf.</p>
-  </section>
+  <main class="content">
+    <section class="text-section" id="about">
+      <h2>🔑 Was ich anbiete</h2>
+      <ul id="service-list">
+        <li>Persönliche Beratung bei der Immobiliensuche</li>
+        <li>Zweisprachige Begleitung (EN/DE)</li>
+        <li>Unabhängige Baufinanzierungsvermittlung (kostenfrei für dich)</li>
+        <li>Unterstützung bei Bank-, Notar- und Maklerterminen</li>
+        <li>Hilfe bei Unterlagen, Abläufen & Übersetzungen</li>
+        <li>Klare Checklisten und Schritt-für-Schritt-Betreuung</li>
+        <li>Ehrlich, strukturiert und mit Herz</li>
+      </ul>
+    </section>
+  </main>
 
-  <section id="informationen">
-    <h2>Hilfreiche Informationen</h2>
-    <ul>
-      <li>Wie funktioniert der Immobilienkauf in Deutschland?</li>
-      <li>Welche Finanzierungsmöglichkeiten gibt es?</li>
-      <li>Wichtige Dokumente & Übersetzungen</li>
-      <li>Behördengänge und Vertragsabschluss</li>
-    </ul>
-  </section>
+  <footer class="footer">
+    <p>&copy; 2025 The Key Broker</p>
+  </footer>
 
-    <section id="kontakt">
-  <h2>Kontakt</h2>
-  <form action="https://formspree.io/f/mkgblvzn" method="POST">
-    <input type="hidden" name="_next" value="https://thekeybroker.de/danke.html">
+  <script>
+    const de = {
+      title: "Willkommen bei The Key Broker",
+      subtitle: "Deine persönliche Begleitung beim Immobilienkauf in Deutschland",
+      button: "Jetzt kostenloses Erstgespräch buchen",
+      list: [
+        "Persönliche Beratung bei der Immobiliensuche",
+        "Zweisprachige Begleitung (EN/DE)",
+        "Unabhängige Baufinanzierungsvermittlung (kostenfrei für dich)",
+        "Unterstützung bei Bank-, Notar- und Maklerterminen",
+        "Hilfe bei Unterlagen, Abläufen & Übersetzungen",
+        "Klare Checklisten und Schritt-für-Schritt-Betreuung",
+        "Ehrlich, strukturiert und mit Herz"
+      ]
+    };
+    const en = {
+      title: "Welcome to The Key Broker",
+      subtitle: "Your trusted partner for buying property in Germany",
+      button: "Book a free consultation",
+      list: [
+        "Personal consulting for your home search",
+        "Bilingual support (EN/DE) throughout the process",
+        "Independent mortgage brokerage (at no cost to you)",
+        "Coordination with agents, banks, notaries & more",
+        "Help with paperwork, appointments, and translations",
+        "Checklists, timelines, and step-by-step explanations",
+        "Transparent, caring, and experienced service"
+      ]
+    };
 
-    <label for="email">E-Mail:</label><br />
-    <input type="email" id="email" name="_replyto" required><br /><br />
+    function switchLang(lang) {
+      const content = lang === 'en' ? en : de;
+      document.getElementById('hero-title').textContent = content.title;
+      document.getElementById('hero-subtitle').textContent = content.subtitle;
+      document.querySelector('.cta').textContent = content.button;
 
-    <label for="message">Nachricht:</label><br />
-    <textarea id="message" name="message" rows="5" required></textarea><br /><br />
-
-    <button class="cta" type="submit">Nachricht senden</button>
-  </form>
-</section>
-
-  <section id="artikel">
-    <h2>Artikel</h2>
-    <p>Lesen Sie unsere neuesten Artikel rund um den Immobilienmarkt in Deutschland.</p>
-    <ul>
-      <li><a href="#">Tipps für ausländische Immobilienkäufer</a></li>
-      <li><a href="#">Finanzierung verstehen – ein Leitfaden</a></li>
-      <li><a href="#">Was Sie bei Übersetzungen beachten sollten</a></li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 The Key Broker. Alle Rechte vorbehalten.</p>
-</footer>
-
+      const ul = document.getElementById('service-list');
+      ul.innerHTML = '';
+      content.list.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  </script>
 </body>
 </html>
+
