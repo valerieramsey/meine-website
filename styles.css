@@ -1,8 +1,7 @@
 /* Reset & Basis */
 * {
   box-sizing: border-box;
-  margin: 0; 
-  padding: 0;
+  margin: 0; padding: 0;
 }
 
 body {
@@ -18,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1.5rem 1rem;
-  background-color: white; /* oder transparent */
+  background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -27,12 +26,9 @@ body {
 }
 
 .logo {
-  max-height: 70px; /* nicht zu groß, max 70px Höhe */
-  width: auto;
-  display: block;
-  margin: 0 auto;
+  max-width: 250px;
+  height: auto;
   user-select: none;
-
 }
 
 .desktop-nav {
@@ -46,6 +42,34 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: #b20303;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  .logo {
+    max-width: 180px;
+  }
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 2em;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -100,9 +124,6 @@ body {
   }
   .mobile-nav-toggle {
     display: block;
-  }
-  .logo {
-    max-width: 180px;
   }
 }
 
@@ -168,27 +189,29 @@ body {
 .angebot-list ul {
   list-style: none;
   margin-bottom: 2em;
-  padding-left: 0;
-  text-align: left;
+  padding-left: 1.5em;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 .angebot-list ul li {
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
-  padding-left: 1.5em;
   margin-bottom: 0.8em;
   position: relative;
-  font-family: 'Inter', sans-serif;
+  color: #111;
+  padding-left: 1.2em;
 }
 
 .angebot-list ul li::before {
-  content: "🔑";
+  content: "•";
   position: absolute;
   left: 0;
   top: 0;
   font-size: 1.2rem;
+  color: #b20303;
 }
 
 /* Abschluss-Text */
