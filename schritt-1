@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Persönliche Beratung – The Key Broker Prozess</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    <h1 id="beratung">Persönliche Beratung</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Schritt 1: Persönliche Beratung bei der Immobiliensuche</h2>
+      <p>Hier erklärst du ausführlich, wie du deine Kunden persönlich bei der Immobiliensuche unterstützt.</p>
+
+      <h3>Was erwartet dich?</h3>
+      <ul>
+        <li>Individuelle Analyse deiner Wünsche und Bedürfnisse</li>
+        <li>Klärung von Fragen rund um den Immobilienmarkt</li>
+        <li>Erstellung einer maßgeschneiderten Suchstrategie</li>
+      </ul>
+
+      <h3>Dein nächster Schritt</h3>
+      <p>Wir begleiten dich professionell und persönlich – bis du dein Traumhaus findest.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 The Key Broker</p>
+  </footer>
+</body>
+</html>
