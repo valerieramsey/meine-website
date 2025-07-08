@@ -186,6 +186,11 @@ footer a {
   .desktop-nav {
     display: none;
   }
+.logo img {
+  height: 50px;
+  max-height: 50px;
+  width: auto;
+}
 
   .mobile-nav-toggle {
     display: block;
