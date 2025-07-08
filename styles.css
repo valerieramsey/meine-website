@@ -271,3 +271,38 @@ footer a {
   }
 }
 
+/* Standard: Mobile-Navigation verstecken */
+.mobile-nav {
+  display: none;
+}
+
+/* Mobile-Menü anzeigen, wenn .open gesetzt */
+.mobile-nav.open {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 70px; /* Höhe Header anpassen */
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  padding: 1em 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Mobile Nav Toggle nur auf kleinen Bildschirmen zeigen */
+.mobile-nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Desktop Menü ausblenden */
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
