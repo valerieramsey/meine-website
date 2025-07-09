@@ -9,17 +9,20 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="main-header">
-  <div class="logo-container">
-    <img src="LOGO.png" alt="The Key Broker Logo" class="logo" />
-  </div>
-  <nav class="desktop-nav">
-    <a href="index.html" class="active">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-</header>
+    <div class="logo-container">
+      <img src="LOGO.png" alt="The Key Broker Logo" class="logo" />
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html" class="active">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
   <nav class="mobile-nav" id="mobile-nav">
     <a href="index.html" class="active">Startseite</a>
     <a href="ueber-mich.html">Über mich</a>
@@ -27,63 +30,64 @@
     <a href="blog.html">Blog</a>
   </nav>
 
+  <!-- HERO SECTION -->
   <section class="hero" style="background-image: url('jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
- <section class="intro-angebot-section">
-  <div class="text-block">
-    <h1>Willkommen bei The Key Broker</h1>
-    <p>Deine persönliche Begleitung beim Immobilienkauf in Deutschland ...</p>
-  </div>
-  <div class="angebot-block">
-    <h2>Angebot</h2>
-    <ul>
-      <li>Persönliche Beratung</li>
-      <li>Zweisprachige Begleitung (EN/DE)</li>
-      <li>Unabhängige Baufinanzierungsvermittlung</li>
-      <li>Hilfe bei Terminen und Unterlagen</li>
-      <li>Checklisten & Schritt-für-Schritt-Betreuung</li>
-      <li>Strukturiert, ehrlich & persönlich</li>
-    </ul>
-  </div>
-</section>
-
+      <h1>Willkommen bei The Key Broker</h1>
+      <h2>Deine persönliche Begleitung beim Immobilienkauf in Deutschland</h2>
+      <p>
+        Du möchtest in Deutschland eine Immobilie kaufen – aber fühlst dich von Bürokratie, Fachbegriffen und Abläufen überfordert? Genau hier komme ich ins Spiel.
+      </p>
+      <p>
+        Als zertifizierte Immobilienexpertin und Baufinanzierungsvermittlerin begleite ich internationale Kunden professionell, persönlich und zweisprachig (Englisch/Deutsch) durch den gesamten Kaufprozess. Von der Suche über die Finanzierung bis zur Schlüsselübergabe – ich bin an deiner Seite.
+      </p>
       <p class="closing-text">
         Lass uns gemeinsam den Immobilienkauf für dich einfacher, sicherer und entspannter machen.
       </p>
-
       <div class="hero-buttons">
-        <a href="kontakt.html" class="btn-primary">📞 Jetzt kostenloses Erstgespräch buchen</a>
+        <a href="kontakt.html" class="btn-primary">Jetzt kostenloses Erstgespräch buchen</a>
         <a href="#" class="btn-secondary">Gratis-Käuferguide herunterladen</a>
       </div>
     </div>
   </section>
-<section class="prozess-buttons">
-  <h2>Unser Prozess für deinen Immobilienkauf</h2>
-  <div class="buttons-grid">
-    <a href="prozess-schritt-1.html#beratung" class="prozess-btn">Persönliche Beratung</a>
-    <a href="prozess-schritt-2.html#begleitung" class="prozess-btn">Zweisprachige Begleitung</a>
-    <a href="prozess-schritt-3.html#baufinanzierung" class="prozess-btn">Baufinanzierungsvermittlung</a>
-    <a href="prozess-schritt-4.html#termine" class="prozess-btn">Unterstützung bei Terminen</a>
-    <a href="prozess-schritt-5.html#checklisten" class="prozess-btn">Checklisten & Abläufe</a>
-    <a href="prozess-schritt-6.html#herz" class="prozess-btn">Mit Herz & Struktur</a>
-  </div>
-</section>
 
+  <!-- ANGEBOT + TEXT NEBENEINANDER -->
+  <section class="intro-angebot-section">
+    <div class="text-block">
+      <h2>Was ich für dich tun kann</h2>
+      <p>Ich begleite dich persönlich und zweisprachig durch jeden Schritt – unabhängig, ehrlich und mit Struktur. Dabei sorge ich dafür, dass du alle wichtigen Entscheidungen auf einer fundierten Basis treffen kannst.</p>
+    </div>
+    <div class="angebot-block">
+      <h2>Angebot</h2>
+      <ul>
+        <li>Persönliche Beratung</li>
+        <li>Zweisprachige Begleitung (EN/DE)</li>
+        <li>Unabhängige Baufinanzierungsvermittlung</li>
+        <li>Hilfe bei Terminen und Unterlagen</li>
+        <li>Checklisten & Schritt-für-Schritt-Betreuung</li>
+        <li>Strukturiert, ehrlich & persönlich</li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
       <p>© 2025 The Key Broker | <a href="kontakt.html">Kontakt</a></p>
     </div>
   </footer>
 
+  <!-- MOBILE NAV SCRIPT -->
   <script>
     const toggle = document.getElementById("menu-toggle");
     const mobileNav = document.getElementById("mobile-nav");
-    toggle.addEventListener("click", () => {
-      mobileNav.classList.toggle("open");
-    });
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("open");
+      });
+    }
   </script>
+
 </body>
 </html>
-
