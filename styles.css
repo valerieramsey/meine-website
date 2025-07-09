@@ -1,4 +1,4 @@
-/* Grundstil & Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +30,6 @@ header.main-header {
   height: auto;
 }
 
-/* Navigation */
 .desktop-nav {
   display: flex;
   gap: 2rem;
@@ -50,10 +49,9 @@ header.main-header {
   color: #006d77;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
   position: relative;
-  background-image: url('jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -138,4 +136,109 @@ header.main-header {
   padding: 0.9em 2em;
   font-size: 1rem;
   font-weight: 600;
-  text-decoration
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #006d77;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #004f59;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #006d77;
+  color: #006d77;
+}
+
+.btn-secondary:hover {
+  background-color: #006d77;
+  color: white;
+}
+
+/* Prozess Button Grid */
+.prozess-buttons {
+  padding: 4rem 1rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.prozess-buttons h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.prozess-btn {
+  background-color: #ffffff;
+  color: #006d77;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #006d77;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.prozess-btn:hover {
+  background-color: #006d77;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
