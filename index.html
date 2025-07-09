@@ -3,88 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Key Broker – Persönliche Begleitung beim Immobilienkauf</title>
-  
+  <title>The Key Broker – Persönliche Immobilienbegleitung</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="main-header">
     <div class="logo-container">
       <img src="LOGO.png" alt="The Key Broker Logo" class="logo" />
     </div>
-    <nav class="desktop-nav">
+    <nav class="main-nav">
       <a href="index.html" class="active">Startseite</a>
       <a href="ueber-mich.html">Über mich</a>
+      <a href="angebot.html">Angebot</a>
       <a href="kontakt.html">Kontakt</a>
-      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <nav class="mobile-nav" id="mobile-nav">
-    <a href="index.html" class="active">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section class="hero" style="background-image: url('jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Willkommen bei The Key Broker</h1>
-      <h2>Deine persönliche Begleitung beim Immobilienkauf in Deutschland</h2>
-      <p>
-        Du möchtest in Deutschland eine Immobilie kaufen – aber fühlst dich von Bürokratie, Fachbegriffen und Abläufen überfordert? Genau hier komme ich ins Spiel.
-      </p>
-      <p>
-        Als zertifizierte Immobilienexpertin und Baufinanzierungsvermittlerin begleite ich internationale Kunden professionell, persönlich und zweisprachig (Englisch/Deutsch) durch den gesamten Kaufprozess. Von der Suche über die Finanzierung bis zur Schlüsselübergabe – ich bin an deiner Seite.
-      </p>
-      <p class="closing-text">
-        Lass uns gemeinsam den Immobilienkauf für dich einfacher, sicherer und entspannter machen.
-      </p>
-      <div class="hero-buttons">
-        <a href="kontakt.html" class="btn-primary">Jetzt kostenloses Erstgespräch buchen</a>
-        <a href="#" class="btn-secondary">Gratis-Käuferguide herunterladen</a>
+  <section class="hero" style="background-image: url('hero-image.jpg')">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Dein Schlüssel zur Immobilie in Deutschland</h1>
+        <p>Persönliche, zweisprachige Begleitung durch den gesamten Kaufprozess</p>
+        <div class="hero-buttons">
+          <a href="kontakt.html" class="btn-primary">Erstgespräch vereinbaren</a>
+          <a href="#angebot" class="btn-secondary">Mehr erfahren</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ANGEBOT -->
-  <section class="intro-angebot-section">
-    <div class="angebot-block">
-      <h2>Angebot</h2>
-      <ul>
-        <li>Persönliche Beratung</li>
-        <li>Zweisprachige Begleitung (EN/DE)</li>
-        <li>Unabhängige Baufinanzierungsvermittlung</li>
-        <li>Hilfe bei Terminen und Unterlagen</li>
-        <li>Checklisten & Schritt-für-Schritt-Betreuung</li>
-        <li>Strukturiert, ehrlich & persönlich</li>
-      </ul>
+  <section class="angebot-section" id="angebot">
+    <div class="angebot-wrapper">
+      <div class="angebot-text">
+        <h2>Deine Vorteile</h2>
+        <ul>
+          <li>Unabhängige Baufinanzierungsberatung</li>
+          <li>Zweisprachige Kommunikation (Deutsch/Englisch)</li>
+          <li>Persönliche Begleitung vor Ort & digital</li>
+          <li>Strukturierte Unterstützung bei jedem Schritt</li>
+        </ul>
+      </div>
+      <div class="angebot-image">
+        <img src="angebot.jpg" alt="Beratungssituation" />
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-content">
-      <p>© 2025 The Key Broker | <a href="kontakt.html">Kontakt</a></p>
-    </div>
+    <p>&copy; 2025 The Key Broker – Persönliche Immobilienbegleitung | <a href="kontakt.html">Kontakt</a></p>
   </footer>
-
-  <!-- MOBILE NAV SCRIPT -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-    if (toggle) {
-      toggle.addEventListener("click", () => {
-        mobileNav.classList.toggle("open");
-      });
-    }
-  </script>
-
 </body>
 </html>
 
