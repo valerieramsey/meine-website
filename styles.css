@@ -1,263 +1,333 @@
-/* Reset */
+/* Reset & Basis */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0; padding: 0;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #111;
+  color: #222;
+  background: #fafafa;
   line-height: 1.6;
-}
-
-/* HEADER */
-header.main-header {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Header */
+.main-header {
+  display: flex;
   align-items: center;
-  padding: 1.5rem 1rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
 }
-.language-switcher {
-  margin-left: auto;  /* schiebt den Switcher ganz nach rechts */
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  align-self: center; /* vertikal ausrichten */
-}
-
-.language-switcher a {
-  color: #111;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.language-switcher a:hover {
-  color: #b20303;
-}
-
 
 .logo-container img {
   max-width: 180px;
   height: auto;
+  user-select: none;
 }
 
 .desktop-nav {
   display: flex;
+  align-items: center;
   gap: 2rem;
-  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .desktop-nav a {
   text-decoration: none;
   color: #333;
-  font-weight: 600;
-  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
+.desktop-nav a.active,
 .desktop-nav a:hover,
-.desktop-nav a.active {
-  color: #006d77;
+.desktop-nav a:focus {
+  color: #b20303;
+  outline: none;
 }
 
-/* HERO SECTION */
+/* Language Switcher */
+.language-switcher {
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.language-switcher a,
+.language-switcher strong {
+  color: #666;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.language-switcher a:hover,
+.language-switcher a:focus {
+  color: #b20303;
+  outline: none;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
   background-size: cover;
-  background-position: center;
-  min-height: 100vh;
+  background-position: center center;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4em 2em;
+  padding: 3em 2em;
+  color: #222;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.85);
   z-index: 1;
+  border-radius: 12px;
+  margin: 0 2em;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 3rem 2rem;
-  border-radius: 12px;
+  display: flex;
   max-width: 1000px;
-  width: 100%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  background: transparent;
+  border-radius: 12px;
+  padding: 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.text-block,
+.angebot-block {
+  flex: 1 1 400px;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.07);
 }
 
 .hero-content h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.5em;
-  color: #111;
+  font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #b20303;
 }
 
 .hero-content h2 {
-  font-size: 1.4rem;
-  color: #555;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
+  color: #555;
 }
 
 .hero-content p {
-  font-size: 1.05rem;
-  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.angebot-block h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #b20303;
 }
 
 .angebot-block ul {
   list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+  padding-left: 0;
 }
 
-.angebot-block li {
-  margin-bottom: 0.8rem;
-  padding-left: 1.4rem;
+.angebot-block ul li {
+  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
   position: relative;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.angebot-block li::before {
+.angebot-block ul li::before {
   content: "•";
   position: absolute;
   left: 0;
-  top: 0;
-  color: #006d77;
-  font-size: 1.2rem;
+  color: #b20303;
+  font-weight: bold;
 }
 
 /* Buttons */
 .hero-buttons {
-  grid-column: 1 / -1;
   margin-top: 2rem;
   display: flex;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .btn-primary,
 .btn-secondary {
-  padding: 0.9em 2em;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
+  padding: 0.9em 2.8em;
   border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
+  user-select: none;
   display: inline-block;
-}
-
-.btn-primary {
-  background-color: #006d77;
-  color: #fff;
+  text-align: center;
+  white-space: nowrap;
   border: none;
 }
 
-.btn-primary:hover {
-  background-color: #004f59;
+.btn-primary {
+  background-color: #b20303;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(178, 3, 3, 0.5);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #8c0202;
+  box-shadow: 0 6px 20px rgba(140, 2, 2, 0.7);
+  outline: none;
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #006d77;
-  color: #006d77;
+  color: #b20303;
+  border: 2px solid #b20303;
+  box-shadow: none;
 }
 
-.btn-secondary:hover {
-  background-color: #006d77;
-  color: white;
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #b20303;
+  color: #fff;
+  outline: none;
 }
 
-/* Prozess Button Grid */
+/* Prozess Buttons Section */
 .prozess-buttons {
-  padding: 4rem 1rem;
-  background-color: #f7f7f7;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .prozess-buttons h2 {
   font-size: 2rem;
-  color: #111;
+  font-weight: 700;
   margin-bottom: 2rem;
+  color: #b20303;
 }
 
 .buttons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 2rem;
 }
 
 .prozess-btn {
-  background-color: #ffffff;
-  color: #006d77;
-  padding: 1rem 2rem;
+  padding: 1em 1.5em;
+  background-color: #fff;
+  border: 2px solid #b20303;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: 600;
-  border: 2px solid #006d77;
-  min-width: 200px;
-  transition: all 0.3s ease;
+  color: #b20303;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
 }
 
-.prozess-btn:hover {
-  background-color: #006d77;
-  color: white;
+.prozess-btn:hover,
+.prozess-btn:focus {
+  background-color: #b20303;
+  color: #fff;
+  outline: none;
 }
 
 /* Footer */
 footer {
-  background: #111;
-  color: #eee;
-  padding: 2rem;
+  background: #222;
+  color: #fff;
+  padding: 1.5rem 2rem;
   text-align: center;
   font-size: 0.9rem;
+  margin-top: auto;
 }
 
 footer a {
-  color: #fff;
-  font-weight: 600;
-  text-decoration: underline;
+  color: #b20303;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-footer a:hover {
-  color: #ddd;
+footer a:hover,
+footer a:focus {
+  color: #fff;
+  outline: none;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .text-block,
+  .angebot-block {
+    padding: 1rem 1.5rem;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-
+  
   .hero-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
+}
 
-  .hero-content p {
-    font-size: 1rem;
+@media (max-width: 480px) {
+  .desktop-nav {
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 0.9rem;
   }
 
   .hero-buttons {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
   }
 }
