@@ -1,1 +1,184 @@
 
+/* Reset & Basis */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  max-width: 220px;
+  height: auto;
+  user-select: none;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a.active,
+.desktop-nav a:hover {
+  color: #b20303;
+}
+
+.language-switcher {
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: #666;
+  margin: 0 0.3rem;
+}
+
+.language-switcher a:hover {
+  color: #b20303;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 2em;
+  color: #222;
+  text-align: left;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  max-width: 1000px;
+  gap: 3rem;
+  background: rgba(255,255,255,0.85);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.text-block,
+.angebot-block {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.hero-content h2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.hero-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.angebot-block h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #b20303;
+}
+
+.angebot-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.angebot-block ul li {
+  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.angebot-block ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b20303;
+  font-weight: bold;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.9em 2.8em;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  user-select: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #b20303;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(178, 3, 3, 0.5);
+}
+
+.btn-primary:hover {
+  background-color: #8c0202;
+  box-shadow: 0 6px 20px rgba(140, 2,
