@@ -356,6 +356,75 @@ footer a:hover {
   min-width: 180px;
   text-align: center;
 }
+.intro-angebot-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 4rem 2rem;
+  background-image: url('jennifer-latuperisa-andresen-GM7cm1IC6Ss-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.intro-angebot-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* halbtransparenter Weiß-Hintergrund */
+  z-index: 1;
+}
+
+.text-block,
+.angebot-block {
+  flex: 1 1 300px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.text-block {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.angebot-block {
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 12px;
+  margin-left: 1rem;
+}
+
+.angebot-block h2 {
+  font-family: 'Libre Baskerville', serif;
+  color: #b20303;
+  margin-bottom: 1rem;
+}
+
+.angebot-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.angebot-block ul li {
+  margin-bottom: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-angebot-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  
+  .text-block,
+  .angebot-block {
+    margin: 0 0 2rem 0;
+  }
+}
+
 
 .prozess-btn:hover {
   background-color: #850202;
